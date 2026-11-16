@@ -1,8 +1,8 @@
 # AGENTS.md — 旅程視覺敘事系統（Travel Editorial System）
 
-> 版本：1.0｜目的：讓 AI Coding Agent 在**無須重設網頁風格與元件**的情況下，持續為不同旅程新增內容或頁面。
+> 版本：1.1｜目的：讓 AI Coding Agent 在**無須重設網頁風格與元件**的情況下，持續為不同旅程新增內容或頁面。
 >
-> 本專案是一個**既有行程的呈現引擎**，不是 AI 自動搜尋及生成行程的後端。
+> 本專案是一個**既有行程的呈現引擎**，附帶可選的 Groq「文稿 → JSON」轉檔工具。**不是**會自動研究、查證、預訂或產生全新旅行事實的後端。
 
 ## 1. Project Mission / 專案目標
 
@@ -13,10 +13,10 @@
 
 ## 2. Tech Stack / 技術邊界
 
-- 原生 HTML5、CSS3、Vanilla JavaScript（ES Modules）、JSON；無資料庫、無 Node runtime、無付費服務依賴。
+- 前端為原生 HTML5、CSS3、Vanilla JavaScript（ES Modules）、JSON；無資料庫、無 Node runtime。可選 Python 3（standard library）＋ Groq API 用於**離線草稿轉檔**；不用 Groq 時網站仍能正常運作。
 - 以 GitHub Pages 部署（`index.html` 為預設首頁）；本地測試需 HTTP Server，**不要直接雙擊檔案用 `file://` 開啟**，因為 `fetch()` 需要本地 HTTP。
 - 允許外部可嵌入圖片（附來源）、Google Maps URL；不需要 Google Maps API 金鑰。
-- 不需要 Groq API 即可渲染、列印或新增旅程。**若將來希望以 Groq 輔助選擇版面變體，只能作為離線內容整理工具**：使用伺服端／本地環境變數讀取 `GROQ_API_KEY`，不得放入 HTML、JS、Git、JSON 或 GitHub Pages 公開檔案。模型不得擅自改寫已查證的旅遊事實。
+- 網頁瀏覽、列印與分享完全不需要 Groq API。需要 AI 將已規劃行程轉為 JSON 時，才由 GitHub Codespaces 中的 `tools/generate_trip.py` 呼叫 Groq；用 Codespaces Secrets 注入 `GROQ_API_KEY`，不得寫入 HTML、JS、Git、JSON 或 GitHub Pages 公開檔案。模型不得擅自改寫旅遊事實。
 
 ## 3. Fixed Design Tokens / 不可擅改的視覺規範
 
@@ -59,8 +59,16 @@
 │   └── trips/
 │       ├── index.json           # 全站旅程清單、預設旅程 slug
 │       └── 2026-kyushu-autumn.json  # 第一篇正式旅程
+│   └── drafts/                  # Groq 產生的未審草稿（不提交 Git）
+├── tools/
+│   ├── generate_trip.py         # 使用 Groq 產生 JSON 草稿
+│   ├── validate_trip.py         # JSON 契約檢查
+│   ├── publish_trip.py          # 審閱後正式發布＋更新索引
+│   └── trip_validation.py       # 共用檢查邏輯
 ├── docs/
 │   └── CONTENT_SCHEMA.md       # 資料欄位定義與範本
+├── examples/
+│   └── itinerary-notes.md      # 供轉檔使用的文稿格式
 ├── AGENTS.md                    # AI 開發規範
 └── README.md                    # 給人看的使用與部署指引
 ```
@@ -69,7 +77,7 @@
 
 ## 5. Content Contract / 新增內容的資料契約
 
-- 將新旅程儲存為 `data/trips/YYYY-region-short-title.json`，`slug` 必須與檔名相同；小寫英數和 `-`，例 `2027-kyoto-spring.json`。
+- 將新旅程儲存為 `data/trips/YYYY-region-short-title.json`，`slug` 必須與檔名相同；小寫英數和 `-`，例 `2026-fukuoka-demo.json`。
 - 更新 `data/trips/index.json` 的 `trips` 陣列，確保旅程切換器可找到它。
 - JSON 必須符合 `docs/CONTENT_SCHEMA.md` 指定欄位、資料型態與命名。
 - 所有景點顯示三語：`title.zh`（**繁體中文**主標）、`title.en`（英文）、`title.ja`（日文）；若原本資料只有一種語言，標記 `待補譯`，不可憑空自創正式官方譯名。
@@ -85,9 +93,9 @@
 
 1. 閱讀本文件及 `docs/CONTENT_SCHEMA.md`。
 2. 接收一份**已完成**、可人工核對的行程文稿；若時間／地點／交通明顯衝突，先提出待補清單，不得默默修改。
-3. 把文稿轉成旅程 JSON；保留所有餐廳備選、來源、風險提示與三語地名。
+3. 把文稿轉成旅程 JSON；可手動整理，或按第 8 節用 Groq 工具產生**未發布草稿**。保留所有餐廳備選、來源、風險提示與三語地名。
 4. 使用現有型別 `feature | place | transport | meal | rest | flight` 決定各節點的**視覺權重**；可以柔性調整 `feature` 比例，但絕不可變更時間或地點。
-5. 在 `data/trips/index.json` 加入 slug 與簡要資訊。
+5. 人工查證內容與格式後，將 JSON 發布至 `data/trips/` 並在 `data/trips/index.json` 加入 slug；可透過 `tools/publish_trip.py` 執行。
 6. 在本地 HTTP Server 開啟網頁，逐日核對文字、網址、Google Maps 導航、來源、日期與餐食項目。
 7. 於 375px、768px、1440px 三種寬度檢查排版；長日文名稱不可溢出、重要連結可操作、圖片有 fallback。
 8. 以瀏覽器列印→另存 PDF，確認**四天全部印出**、連結文字清楚、內容不被卡片截斷。
@@ -106,9 +114,39 @@
 - JSON 載入失敗要顯示可理解的錯誤，不得呈現空白頁。
 - 使用者可按日切換、開啟 Google Maps、開合餐廳備選、列印或分享網址；互動必須真實有效，避免裝飾性死按鈕。
 
-## 8. Optional Groq Editorial Assistant / 可選非必要輔助
+## 8. Optional Groq Draft Agent / 可選 AI 行程 JSON 產生工具
 
-若之後實作本地的 Groq 版面顧問，可輸入**已驗證**的行程 JSON，僅允許返回活動的 `displayVariant` 建議（例如 `feature` / `compact`）與文字摘要長度建議。必須經 JSON schema 驗證，白名單欄位更新，不得調整 `time`, `title`, `details`, `source`, `map` 等行程事實。服務不可在公開 GitHub Pages 的 JavaScript 中直接請求帶私鑰的 API；不啟用時必須 100% 正常運作。
+**用途與權限邊界**：這是把「人工已完成、能核對的行程文稿」轉成 JSON 的**轉檔 Agent**，不是自動旅遊研究或資料驗證服務。不可依賴 Groq 杜撰商家、發車班次、票價、圖片、來源 URL，也不可將 AI 回覆當成官方查證。
+
+### 每次新增新旅程的固定指令
+
+1. 在 GitHub Codespaces 準備 `examples/` 或自己建立的 Markdown 文稿，**先將航班、日期、來源、餐食等資料整理清楚**。
+2. GitHub 帳號中的 **Codespaces Secrets** 儲存 `GROQ_API_KEY`，允許目前 Repository 使用；若已開啟 Codespace 可能需要重新啟動才能讀到新值。**切勿在對話、Commit、GitHub Pages 或前端檔案中留下私鑰**。
+3. 於 repo 根目錄執行：
+
+```bash
+python3 tools/generate_trip.py --input examples/itinerary-notes.md --slug 2026-fukuoka-demo --title "福岡一日散策示範"
+```
+
+4. 工具只會建立 `data/drafts/2026-fukuoka-demo.json`；**不要跳過人工核對**。有錯誤先編輯草稿，沒有來源的資訊須補查或標記待確認。
+5. 人工確認後執行：
+
+```bash
+python3 tools/publish_trip.py --slug 2026-fukuoka-demo --approve
+python3 tools/validate_trip.py
+```
+
+6. `publish_trip.py` 自動建立正式的 `data/trips/2026-fukuoka-demo.json` 並更新 `data/trips/index.json`。在 `http://localhost:8000/?trip=2026-fukuoka-demo` 逐日檢查，確認無誤後才 Git commit、push。
+
+### 不可違反的規則
+
+- 只能使用 `GROQ_API_KEY` 環境變數呼叫 Groq；不准要求把 API Key 寫在網頁或上傳到 Repository。
+- Groq API 預設只在 Codespaces **手動觸發**，網頁訪客不會呼叫 Groq；嚴禁在 `assets/app.js` 直接帶金鑰請求 API。
+- `generate_trip.py` 使用 Groq JSON Object Mode 產生 JSON，再用 Python 驗證本專案資料契約。**格式驗證不等於事實查證**，任何日期、餐廳、費用、班次或圖片授權仍需人工確認。
+- 不可使用沒有原始來源的外部網址作為「查證結果」。Google Maps 搜尋網址只代表導航入口，不代表地址、營業資訊已查證。
+- 大型行程可能超出模型單次輸出額度或免費限制；失敗要保留原文、提示分批處理，不得反覆無限重試。
+- 無需修改 `index.html`、`assets/app.js`、`assets/style.css` 就能新增一筆內容，這是首要驗收標準。
+- `data/drafts/` 不納入 Git，避免未確認的草稿被 GitHub Pages 公開；只提交經審核並發布的正式 JSON。
 
 ## 9. Definition of Done / 交付標準
 
