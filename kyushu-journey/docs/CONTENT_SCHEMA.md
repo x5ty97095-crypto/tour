@@ -1,45 +1,78 @@
-# CONTENT_SCHEMA.md — 旅程資料結構
+# Content contract — TRAVEL / EDITION
 
-單一旅程範例：`data/trips/2026-kyushu-autumn.json`。本專案用 JSON 當內容資料庫，不建立資料庫伺服器。
+這份文件描述 `data/trips/*.json` 的真實渲染格式。與 `assets/app.js` 配套。**前端內容資料格式 ≠ Groq 回傳保證，必須執行 Python 檢查與人工查證。**
 
-## 頂層欄位
+## 主結構
 
-| 欄位 | 型別 | 必填 | 用途 |
-|---|---|---|---|
-| `slug` | string | ✓ | 小寫連字號識別碼，與檔名一致 |
-| `title`, `subtitle`, `description` | string | ✓ | 主標、副標、概述 |
-| `dateRange`, `duration`, `updatedAt` | string | ✓ | 日期、天數、最後查證日期 |
-| `heroImage`, `heroImageAlt` | string | ✓ | HTTPS 直接圖片及替代文字 |
-| `imageCredit` | {label,url} | ✓ | 著作權／來源標註 |
-| `lodging` | {name,detail} | ✓ | 三語住宿區域與未知項目註明 |
-| `flights` | array | 可選 | 已公布航班時刻，非訂位證明 |
-| `pretrip` | array | ✓ | 事前注意事項；`level` 為 high 或 medium |
-| `days` | array | ✓ | 1–14 天，每一天有 timeline、meals、notes |
-| `sources` | array | ✓ | 查證資料來源清單 |
+`slug, title, subtitle, dateRange, duration, description, heroImage, heroImageAlt, imageCredit, updatedAt, lodging, flights, pretrip, days, sources`
 
-## 日程 `days[]`
+- `slug`：`YYYY-region-short-title`，須與檔名相同。例：`2027-kyoto-spring`。
+- `title, subtitle, dateRange, duration, description, updatedAt`：非空字串。
+- `heroImage`：合法 HTTP(S) 圖片 URL；**未取得合法授權圖片時保持空字串**，前端會降級顯示。
+- `heroImageAlt`：圖片替代描述；無圖可為空。
+- `imageCredit`：`{"label":"作者／出處","url":"https://..."}` 或 `null`。
+- `lodging`：`{"name":{"zh":"...","en":"...","ja":"..."}, "detail":"..."}`。不可公開 Airbnb 住址。
+- `flights`：可空陣列；若有航班，物件欄位為 `direction,date,flight,route,time,note,source`。
+- `pretrip`：可空陣列，每項為 `level`（high/medium）、`title, text`、選填 `url`。
+- `sources`：可空陣列，元素為 `{"name":"資料來源", "url":"https://..."}`；不得由 AI 杜撰。
 
-每一天必須有 `date`, `weekday`, `number`, `heading`, `theme`, `summary`, `base`, `pace`, `routeText`, `highlights[]`, `meals[]`, `notes[]`。`routeMaps` 為選填的 Google Maps 路線網址。若 Google Maps 的特定交通模式、轉乘或多點路線無法準確呈現，請改成單段地圖連結，不要偽稱為可直接照走的完整路線。
+## 每日 `days[]`
 
-## 行程節點 `highlights[]`
+| Key | 說明 |
+|---|---|
+| `date` | `11.26` 類型的日期字串 |
+| `weekday` | `MON` 到 `SUN` |
+| `number` | `01`、`02` 等；字串 |
+| `heading`, `theme`, `summary` | 當日標題、主題及摘要 |
+| `base`, `pace` | 地點與行程強度 |
+| `routeText` | 中文動線，例如「博多 → 太宰府 → 天神」 |
+| `routeMaps` | 已提供的 Google Maps 導航 URL，未知可為 `""` |
+| `highlights` | 至少一個活動物件，依時間排序 |
+| `meals` | 餐食候選清單，可為 `[]` |
+| `notes` | 當日風險與提醒文字陣列 |
 
-- `time`：`HH:mm–HH:mm`（例 `09:30–10:10`）；跨日航班另在 `details` 註明日期。
-- `type`：`feature`, `place`, `transport`, `meal`, `rest`, `flight` 六種之一。
-- `title`：`{ "zh": "繁體中文", "en": "English", "ja": "日本語" }`。
-- `details`：必填，講清楚停留／交通與可執行細節。
-- `tip`：選填，交通轉乘、風險或預約提醒。
-- `map`、`source`：選填 HTTPS URL。若有精確票價及營業時間，應附 `source`。
+### `highlights[]` 活動
 
-## 餐食 `meals[]`
+`time, type, title, details` 必填；`tip, map, source` 可為空字串。
 
-每項使用 `slot`, `main`, `alternatives`。`main` 使用 `zh`, `en`, `ja`, `why`, `maps`，`source` 可選。備選使用 `zh`, `ja`, `why`, `maps`。如果因團體行程或未知集合點無法推薦確切餐廳，請明確標示彈性限制，不要編造店鋪。
+```json
+{
+  "time": "09:00–10:30",
+  "type": "feature",
+  "title": {"zh": "大濠公園", "en": "Ohori Park", "ja": "大濠公園"},
+  "details": "活動描述。未確定之時刻須寫明待確認。",
+  "tip": "注意事項",
+  "map": "https://www.google.com/maps/search/?api=1&query=Ohori+Park",
+  "source": ""
+}
+```
 
-## 來源 `sources[]`
+`type` 必須為 `transport | feature | place | meal | rest | flight`，且時間格式為 `HH:mm–HH:mm`（例如 `09:00–10:30`）。遇到跨日飛行，應在說明與航班欄位另標日期，不可把不同時區的時刻當同一天時間軸排序。
 
-每項為 `{ "name": "來源名稱", "url": "https://..." }`。至少應涵蓋航班／交通、重點場館、特殊票務和一日團。如官方資料與第三方網站衝突，以官方資料為主並保留待查註記。
+### `meals[]` 餐食
 
-## 新增示例
+```json
+{
+  "slot": "午餐 · 太宰府",
+  "main": {
+    "zh": "餐廳中文名", "en": "Restaurant English name", "ja": "日本語店名",
+    "why": "推薦理由", "maps": "", "source": ""
+  },
+  "alternatives": [
+    {"zh":"備案甲", "ja":"備案甲日文", "why":"理由", "maps":""},
+    {"zh":"備案乙", "ja":"備案乙日文", "why":"理由", "maps":""}
+  ]
+}
+```
 
-1. 新增 `data/trips/2027-kyoto-spring.json`，最少複製既有旅程的**資料結構**，不得複製既有日期或店家當成新資料。
-2. 編輯 `data/trips/index.json`：`trips` 加入 `{ "slug": "2027-kyoto-spring", "title": "京都・春日散策", "date": "2027.04.xx–xx", "region": "日本・關西" }`。
-3. 開啟 `index.html?trip=2027-kyoto-spring` 驗證；前端模板與 CSS 不需修改。
+餐食由人工確認，原則上主選一間、兩間備案。團體行程中餐飲受限應明確說明。
+
+## 產生與發布流程
+
+1. 先整理真實資料成 `examples/itinerary-notes.md` 類型的文稿；未完成資料查核不得宣稱已查證。
+2. GitHub Codespaces 透過 `python3 tools/generate_trip.py --input ... --slug ... --title ...` 呼叫 Groq，產生 `data/drafts/slug.json`。
+3. 人工審查該草稿，修正與來源不一致之處，尤其是營業時間、班次、費用、店家、三語名稱、圖片授權與 URL。
+4. `python3 tools/publish_trip.py --slug ... --approve` 驗證並發布；此步驟會加入 `data/trips/slug.json` 並更新 `data/trips/index.json`。
+5. `python3 tools/validate_trip.py` 檢查全部正式旅程；在瀏覽器驗收後再提交 Git。
+
+**注意：** 目前工具以 Groq `json_object` 模式生成，再用本機程式檢查資料契約。JSON 格式正確不代表旅行事實已確認。大型多日行程可能因免費額度、速率或輸出 token 限制失敗；建議分批整理與審閱，不要無限重試。Groq API 不會由 GitHub Pages 直接呼叫。
