@@ -46,14 +46,6 @@ python3 -m http.server 8000
 3. Branch 選 **main**、Folder 選 **/(root)**，儲存並等待部署。
 4. 到 `https://<username>.github.io/<repository>/` 瀏覽。此專案全用**相對路徑**，支援 project-site 子路徑。
 
-```bash
-git init
-git add .
-git commit -m "feat: launch reusable travel editorial website"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git push -u origin main
-```
 
 > 此封裝不包含 GitHub 帳號憑證，不能代替你建立公開儲存庫。推送前請自行確認 repository 名稱與帳號。
 
@@ -64,7 +56,3 @@ git push -u origin main
 - 一日團 11/28 空位未完成實際預訂確認；時段依上架範例。
 - 航班、門票與平台商品可能調整，出發前仍需確認。
 - 圖片使用 Unsplash License 的授權作品（來源於旅程 JSON）。字型使用 SIL OFL 1.1 開源字體。網站不另上傳字型檔。
-
-## 作業繳交用簡介（可直接改寫）
-
-專案以一份九州四天三夜旅行行程為範例，打造可重複使用的旅遊內容展示網站。`AGENTS.md` 定義了視覺色彩、三語地名、時間軸、交通／餐飲／警示元件、檔案命名與資料驗證流程。以後新增旅程只須新增結構化 JSON 並更新索引，AI 就能沿用相同的排版規則，不必重新開發網頁。
