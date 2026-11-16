@@ -1,0 +1,403 @@
+{
+  "slug": "2026-kyushu-agent-test",
+  "title": "九州四天三夜自由行",
+  "subtitle": "Kyushu 4‑Day Itinerary",
+  "dateRange": "2026.11.26 — 2026.11.29",
+  "duration": "4 DAYS / 3 NIGHTS",
+  "description": "本行程以福岡大濠公園為住宿基地，結合福岡市區、太宰府、門司港與由布院／別府一日遊，並搭乘星悅航空紅眼航班往返北九州機場。行程設計順路、緩衝充足，避免過度奔波。",
+  "heroImage": "",
+  "heroImageAlt": "",
+  "imageCredit": null,
+  "updatedAt": "2026-11-16",
+  "lodging": {
+    "name": {
+      "zh": "福岡大濠公園附近",
+      "en": "Near Ohori Park, Fukuoka",
+      "ja": "大濠公園近く"
+    },
+    "detail": "Airbnb 住宿，四晚同一區域，方便往返市區與小倉、門司港。"
+  },
+  "flights": [
+    {
+      "direction": "去程",
+      "date": "11/26",
+      "flight": "SFJ(7G)800",
+      "route": "桃園 → 北九州機場",
+      "time": "03:00–06:15",
+      "note": "紅眼航班，抵達後約 30 分鐘辦理報到",
+      "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"
+    }
+  ],
+  "pretrip": [],
+  "days": [
+    {
+      "date": "11.26",
+      "weekday": "THU",
+      "number": "01",
+      "heading": "抵達北九州機場與休息",
+      "theme": "休息",
+      "summary": "抵達北九州機場後前往小倉或門司港，並前往大濠公園附近住宿，調整時差與疲勞。",
+      "base": "北九州機場 → 小倉 → 大濠公園",
+      "pace": "低",
+      "routeText": "北九州空港 → 小倉站 → 大濠公園",
+      "routeMaps": "",
+      "highlights": [
+        {
+          "time": "06:30–07:30",
+          "type": "transport",
+          "title": {
+            "zh": "巴士前往小倉",
+            "en": "Bus to Kokura",
+            "ja": "小倉へバス"
+          },
+          "details": "北九州空港特急きっぷ 07:24 出發",
+          "tip": "抵達後先前往住宿區休息",
+          "map": "",
+          "source": "https://www.kitakyu-air.jp/rev-campaign-express.php"
+        }
+      ],
+      "meals": [
+        {
+          "slot": "晚餐",
+          "main": {
+            "zh": "Royal Garden Café 大濠公園",
+            "en": "Royal Garden Café",
+            "ja": "Royal Garden Café",
+            "why": "大濠公園入口附近，環境舒適",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Royal%20Garden%20Caf%C3%A9",
+            "source": ""
+          },
+          "alternatives": [
+            {
+              "zh": "大濠公園前咖啡",
+              "ja": "大濠公園前カフェ",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92%E5%89%8D%E5%92%96%E5%95%A1"
+            },
+            {
+              "zh": "大濠公園周邊餐廳",
+              "ja": "大濠公園周辺レストラン",
+              "why": "多樣選擇",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E5%A4%A7%E6%BF%A0%E5%85%AC%E5%9C%92%E5%91%A8%E9%82%8A%E9%A4%90%E5%BB%B3"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "抵達後先前往住宿區休息，避免第一天行程過度奔波。"
+      ]
+    },
+    {
+      "date": "11.27",
+      "weekday": "FRI",
+      "number": "02",
+      "heading": "福岡市區 & 太宰府",
+      "theme": "文化",
+      "summary": "上午逛博多站周邊，下午前往太宰府天滿宮參觀。",
+      "base": "福岡市區 → 太宰府",
+      "pace": "中",
+      "routeText": "博多站 → 太宰府站",
+      "routeMaps": "",
+      "highlights": [
+        {
+          "time": "09:00–10:30",
+          "type": "place",
+          "title": {
+            "zh": "博多一幸舎",
+            "en": "Hakata Ikkousha",
+            "ja": "博多一幸舎"
+          },
+          "details": "博多站前，傳統博多拉麵，營業時間 10:00–22:00",
+          "tip": "建議提前 1–2 天預約",
+          "map": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E4%B8%80%E5%B9%B8%E8%88%8E",
+          "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"
+        },
+        {
+          "time": "11:30–13:00",
+          "type": "transport",
+          "title": {
+            "zh": "西鐵線前往太宰府",
+            "en": "Nishi Line to Dazaifu",
+            "ja": "西鉄線で太宰府へ"
+          },
+          "details": "約 30 分",
+          "tip": "車票可在站內自動售票機購買",
+          "map": "",
+          "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"
+        },
+        {
+          "time": "13:30–15:30",
+          "type": "place",
+          "title": {
+            "zh": "太宰府天滿宮",
+            "en": "Dazaifu Tenmangu",
+            "ja": "太宰府天満宮"
+          },
+          "details": "開門時間 06:30–19:00",
+          "tip": "祈願受理時間 08:45–17:00",
+          "map": "https://www.google.com/maps/search/?api=1&query=Dazaifu%20Tenmangu",
+          "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"
+        }
+      ],
+      "meals": [
+        {
+          "slot": "午餐",
+          "main": {
+            "zh": "天神屋",
+            "en": "Tenjin-ya",
+            "ja": "天神屋",
+            "why": "太宰府站附近，營業時間 10:00–22:00",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Tenjin-ya",
+            "source": ""
+          },
+          "alternatives": [
+            {
+              "zh": "太宰府拉麵",
+              "ja": "太宰府ラーメン",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E5%A4%AA%E5%AE%B0%E5%BA%9C%E6%8B%89%E9%BA%B5"
+            },
+            {
+              "zh": "太宰府咖啡",
+              "ja": "太宰府カフェ",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E5%A4%AA%E5%AE%B0%E5%BA%9C%E5%92%96%E5%95%A1"
+            }
+          ]
+        },
+        {
+          "slot": "晚餐",
+          "main": {
+            "zh": "博多天神屋",
+            "en": "Hakata Tenjin-ya",
+            "ja": "博多天神屋",
+            "why": "天神區，營業時間 10:00–22:00",
+            "maps": "https://www.google.com/maps/search/?api=1&query=Hakata%20Tenjin-ya",
+            "source": ""
+          },
+          "alternatives": [
+            {
+              "zh": "博多屋",
+              "ja": "博多屋",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E5%8D%9A%E5%A4%9A%E5%B1%8B"
+            },
+            {
+              "zh": "一蘭拉麵",
+              "ja": "一蘭ラーメン",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E4%B8%80%E8%98%AD%E6%8B%89%E9%BA%B5"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "太宰府天滿宮開放時間 06:30–19:00，建議下午前往。"
+      ]
+    },
+    {
+      "date": "11.28",
+      "weekday": "SAT",
+      "number": "03",
+      "heading": "由布院 & 別府一日遊",
+      "theme": "溫泉",
+      "summary": "搭乘 KKday/Klook 由布院＆別府地獄日帰り團，體驗金鱗湖與別府地獄。",
+      "base": "福岡市 → 由布院 → 別府",
+      "pace": "中",
+      "routeText": "福岡市 → 由布院 → 別府 → 福岡市",
+      "routeMaps": "",
+      "highlights": [
+        {
+          "time": "08:00–18:00",
+          "type": "feature",
+          "title": {
+            "zh": "KKday 由布院＆別府地獄日帰り團",
+            "en": "KKday Yufuin & Beppu Hell Day Trip",
+            "ja": "KKday 由布院＆別府地獄日帰りツアー"
+          },
+          "details": "出發地：博多駅，包含金鱗湖、別府地獄等",
+          "tip": "4 天前可免費取消",
+          "map": "https://www.google.com/maps/search/?api=1&query=KKday%20%E7%94%B1%E5%B8%83%E9%99%A2%EF%BC%86%E5%88%A5%E5%BA%9C%E5%9C%B0%E7%8D%84%E6%97%A5%E5%B8%B0%E3%82%8A%E5%9C%98",
+          "source": ""
+        }
+      ],
+      "meals": [
+        {
+          "slot": "午餐",
+          "main": {
+            "zh": "湯の坪 うなぎ たかはし",
+            "en": "Uchiyama Takahashi",
+            "ja": "湯の坪 うなぎ たかはし",
+            "why": "由布院市中心，營業時間 11:00–22:00",
+            "maps": "https://www.google.com/maps/search/?api=1&query=%E6%B9%AF%E3%81%AE%E5%9D%AA%20%E3%81%86%E3%81%AA%E3%81%8E%20%E3%81%9F%E3%81%8B%E3%81%AF%E3%81%97",
+            "source": ""
+          },
+          "alternatives": [
+            {
+              "zh": "カフェ・レストラン いろは",
+              "ja": "カフェ・レストラン いろは",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E3%82%AB%E3%83%95%E3%82%A7%E3%83%BB%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%81%84%E3%82%8D%E3%81%AF"
+            },
+            {
+              "zh": "レストラン ふじや",
+              "ja": "レストラン ふじや",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%81%B5%E3%81%98%E3%82%84"
+            }
+          ]
+        },
+        {
+          "slot": "晚餐",
+          "main": {
+            "zh": "別府温泉 かまどや",
+            "en": "Kamada-ya",
+            "ja": "別府温泉 かまどや",
+            "why": "別府駅前，營業時間 10:00–23:00",
+            "maps": "https://www.google.com/maps/search/?api=1&query=%E5%88%A5%E5%BA%9C%E6%B8%A9%E6%B3%89%20%E3%81%8B%E3%81%BE%E3%81%A9%E3%82%84",
+            "source": ""
+          },
+          "alternatives": [
+            {
+              "zh": "レストラン ふく",
+              "ja": "レストラン ふく",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%20%E3%81%B5%E3%81%8F"
+            },
+            {
+              "zh": "カフェ ひらめ",
+              "ja": "カフェ ひらめ",
+              "why": "同區域",
+              "maps": "https://www.google.com/maps/search/?api=1&query=%E3%82%AB%E3%83%95%E3%82%A7%20%E3%81%B2%E3%82%89%E3%82%81"
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "團體行程時間約 10 時間，請提前 4 天預約。"
+      ]
+    },
+    {
+      "date": "11.29",
+      "weekday": "SUN",
+      "number": "04",
+      "heading": "小倉 & 門司港 & 回程",
+      "theme": "歷史",
+      "summary": "上午前往小倉，下午至門司港觀光，傍晚返回北九州機場搭乘返程航班。",
+      "base": "小倉 → 門司港 → 北九州機場",
+      "pace": "中",
+      "routeText": "小倉站 → 門司港站 → 北九州空港",
+      "routeMaps": "",
+      "highlights": [
+        {
+          "time": "09:00–10:30",
+          "type": "place",
+          "title": {
+            "zh": "小倉城",
+            "en": "Kokura Castle",
+            "ja": "小倉城"
+          },
+          "details": "小倉站附近，開放時間 09:00–18:00",
+          "tip": "可搭乘 JR 門司港線前往門司港",
+          "map": "",
+          "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"
+        },
+        {
+          "time": "11:00–13:00",
+          "type": "place",
+          "title": {
+            "zh": "門司港",
+            "en": "Moji Port",
+            "ja": "門司港"
+          },
+          "details": "觀光區，開放時間 24 時間",
+          "tip": "可搭乘 JR 門司港線 08:00 起",
+          "map": "https://www.google.com/maps/search/?api=1&query=%E9%96%80%E5%8F%B8%E6%B8%AF",
+          "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"
+        },
+        {
+          "time": "14:00–16:00",
+          "type": "transport",
+          "title": {
+            "zh": "JR 門司港線快速前往小倉",
+            "en": "JR Moji to Kokura Rapid",
+            "ja": "JR 門司港線快速で小倉へ"
+          },
+          "details": "約 25 分",
+          "tip": "抵達小倉後轉乘巴士至北九州機場",
+          "map": "",
+          "source": "https://www.jr-kenketsu.co.jp/kenketsu/route/route_01.html"
+        }
+      ],
+      "meals": [
+        {
+          "slot": "午餐",
+          "main": {
+            "zh": "小倉天神屋",
+            "en": "Kokura Tenjin-ya",
+            "ja": "小倉天神屋",
+            "why": "小倉站附近，營業時間 10:00–22:00",
+            "maps": "",
+            "source": ""
+          },
+          "alternatives": [
+            {
+              "zh": "小倉屋",
+              "ja": "小倉屋",
+              "why": "同區域",
+              "maps": ""
+            },
+            {
+              "zh": "一蘭ラーメン",
+              "ja": "一蘭ラーメン",
+              "why": "同區域",
+              "maps": ""
+            }
+          ]
+        },
+        {
+          "slot": "晚餐",
+          "main": {
+            "zh": "北九州空港附近餐廳",
+            "en": "Airport Restaurant",
+            "ja": "空港レストラン",
+            "why": "方便返程前用餐",
+            "maps": "",
+            "source": ""
+          },
+          "alternatives": [
+            {
+              "zh": "空港周邊餐廳",
+              "ja": "空港周辺レストラン",
+              "why": "同區域",
+              "maps": ""
+            },
+            {
+              "zh": "空港附近咖啡",
+              "ja": "空港近くカフェ",
+              "why": "同區域",
+              "maps": ""
+            }
+          ]
+        }
+      ],
+      "notes": [
+        "返程航班 23:50，建議 20:00 前抵達機場。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "name": "星悅航空時刻表",
+      "url": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"
+    },
+    {
+      "name": "北九州空港特急きっぷ",
+      "url": "https://www.kitakyu-air.jp/rev-campaign-express.php"
+    },
+    {
+      "name": "JR 門司港線時刻表",
+      "url": "https://www.jr-kenketsu.co.jp/kenketsu/route/route_01.html"
+    }
+  ]
+}

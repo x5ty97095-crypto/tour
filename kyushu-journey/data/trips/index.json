@@ -1,6 +1,17 @@
 {
   "defaultTrip": "2026-kyushu-autumn",
   "trips": [
-    {"slug": "2026-kyushu-autumn", "title": "九州・秋末的四日散策", "date": "2026.11.26–11.29", "region": "日本・九州"}
+    {
+      "slug": "2026-kyushu-autumn",
+      "title": "九州・秋末的四日散策",
+      "date": "2026.11.26–11.29",
+      "region": "日本・九州"
+    },
+    {
+      "slug": "2026-kyushu-agent-test",
+      "title": "九州四天三夜自由行",
+      "date": "2026.11.26 — 2026.11.29",
+      "region": "福岡大濠公園附近"
+    }
   ]
 }
