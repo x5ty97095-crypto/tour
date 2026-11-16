@@ -1,0 +1,125 @@
+{
+  "slug": "2026-kyushu-autumn",
+  "title": "九州・秋末的四日散策",
+  "subtitle": "Fukuoka · Dazaifu · Yufuin · Kitakyushu",
+  "dateRange": "2026.11.26 — 11.29",
+  "duration": "4 DAYS / 3 NIGHTS",
+  "description": "從大濠公園的湖光開始，以門司港的海風收尾。城市、神社、山間溫泉與舊港町之間，以大眾運輸串成能真正走完的四天。",
+  "heroImage": "https://images.unsplash.com/photo-1698790473387-4e09197c7a38?auto=format&fit=crop&w=1800&q=85",
+  "heroImageAlt": "福岡大濠公園湖面與紅色涼亭",
+  "imageCredit": {"label": "Photo: Winged Jedi / Unsplash", "url": "https://unsplash.com/photos/a-gazebo-in-the-middle-of-a-lake-with-a-city-in-the-background-L_GSQ5N8IU0"},
+  "updatedAt": "2026-11-16",
+  "lodging": {"name": {"zh": "大濠公園附近 Airbnb", "en": "Airbnb near Ohori Park", "ja": "大濠公園周辺のAirbnb"}, "detail": "尚未提供確切地址，所有站距以大濠公園站為估計起點；入住與行李寄放時間須向房東確認。"},
+  "flights": [
+    {"direction": "去程", "date": "11/26（四）", "flight": "7G800", "route": "桃園 TPE → 北九州 KKJ", "time": "03:00 → 06:15", "note": "台灣桃園第一航廈出發，抵達為日本當地時間。", "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"},
+    {"direction": "回程", "date": "11/29（日）", "flight": "7G801", "route": "北九州 KKJ → 桃園 TPE", "time": "23:50 → 11/30 01:30", "note": "返台為隔日凌晨，不是 11/29 當天抵台。", "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"}
+  ],
+  "pretrip": [
+    {"level": "high", "title": "先確認紅眼航班與機場接駁", "text": "11/26 凌晨 03:00 起飛，出門、交通與報到應安排在 11/25 深夜。11/29 晚間須預留 2 小時以上國際線報到與出境時間。", "url": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"},
+    {"level": "high", "title": "報名 11/28 由布院・別府一日團", "text": "本行程採 KKday 上架的集合型一日團作為可選推薦；產品頁班表不是 11/28 已有空位的證明，務必選擇實際日期、核對成團與集合地。", "url": "https://www.kkday.com/zh-hk/product/175897"},
+    {"level": "medium", "title": "詢問 Airbnb 行李寄放規則", "text": "11/26 抵達非常早、11/29 中午前通常需退房。若不能寄放，改用博多站／小倉站寄物櫃；大型行李櫃有額滿風險。"},
+    {"level": "medium", "title": "日文店名、交通班次及餐廳營業時間以當日為準", "text": "預定的交通時間為規劃窗口，不是已訂位的固定車次；車站／月台及當日班表需再次查詢。", "url": "https://nishitetsu-ktq.jp/archives/9209"}
+  ],
+  "days": [
+    {
+      "date": "11.26", "weekday": "THU", "number": "01", "heading": "抵達九州・把步調留給湖畔", "theme": "福岡初見", "summary": "紅眼航班後避免長途奔波。由北九州轉入博多，午后散步大濠公園，傍晚回住宿休息。", "base": "福岡市・大濠公園", "pace": "低強度", "routeText": "北九州機場 → 小倉 → 博多 → 大濠公園 → 赤坂／住宿", "routeMaps": "https://www.google.com/maps/dir/?api=1&origin=Kitakyushu+Airport&destination=Ohori+Park+Fukuoka&waypoints=Kokura+Station%7CHakata+Station&travelmode=transit", "highlights": [
+        {"time": "06:15–08:30", "type": "transport", "title": {"zh": "北九州機場 → 小倉站", "en": "Kitakyushu Airport → Kokura Station", "ja": "北九州空港 → 小倉駅"}, "details": "06:15 抵達，預留 60–90 分鐘入境、領行李、候車。搭西鐵機場巴士至小倉站，車程通常約 35–50 分鐘；實際發車請查冬季班表。", "tip": "若飛機或入境延誤，整段行程後移，首日上午的景點可直接取消。", "map": "https://www.google.com/maps/search/?api=1&query=Kitakyushu+Airport", "source": "https://nishitetsu-ktq.jp/archives/9209"},
+        {"time": "08:30–10:00", "type": "transport", "title": {"zh": "小倉 → 博多・處理行李", "en": "Kokura → Hakata", "ja": "小倉駅 → 博多駅"}, "details": "建議使用山陽新幹線前往博多，乘車約 15–20 分鐘，未含候車與轉乘。自由席標準票價參考約 ¥2,160；若想省錢可改 JR 在來線，預留較長時間。", "tip": "Airbnb 未能提前寄放時，可先使用博多車站行李寄物櫃。", "map": "https://www.google.com/maps/dir/?api=1&origin=Kokura+Station&destination=Hakata+Station&travelmode=transit", "source": "https://jr-shinkansen.net/en/articles/kokura-hakata/"},
+        {"time": "10:15–11:15", "type": "place", "title": {"zh": "櫛田神社與博多舊街區", "en": "Kushida Shrine & Old Hakata", "ja": "櫛田神社・博多旧市街"}, "details": "在博多區做一段短距離的古街散策；若前一晚沒睡好，可直接略過，找咖啡店休息。", "tip": "這是彈性項目，不應為了打卡犧牲後續休息時間。", "map": "https://www.google.com/maps/search/?api=1&query=Kushida+Shrine+Fukuoka"},
+        {"time": "11:30–12:30", "type": "meal", "title": {"zh": "博多拉麵午餐", "en": "Hakata Ramen Lunch", "ja": "博多ラーメン"}, "details": "優先選博多車站附近的店，方便之後搭地下鐵往大濠公園。用餐預留 60 分鐘含排隊。", "map": "https://www.google.com/maps/search/?api=1&query=Hakata+Ikkousha+Deitos"},
+        {"time": "13:15–15:15", "type": "feature", "title": {"zh": "大濠公園與日本庭園", "en": "Ohori Park & Japanese Garden", "ja": "大濠公園・日本庭園"}, "details": "從博多搭地下鐵至大濠公園站後沿湖散步；若體力允許，進入日本庭園。11 月日本庭園 09:00–17:00，最晚入園 16:45，成人 ¥250。", "tip": "園內咖啡廳是當天最舒適的休息節點；視疲勞程度可縮短為純湖畔散步。", "map": "https://www.google.com/maps/search/?api=1&query=Ohori+Park+Japanese+Garden", "source": "https://www.ohoriteien.jp/en/"},
+        {"time": "15:30–18:00", "type": "rest", "title": {"zh": "Airbnb 入住、休息", "en": "Airbnb Check-in & Rest", "ja": "チェックイン・休憩"}, "details": "以大濠公園附近的 Airbnb 為中心。確切入住時間、步行距離與行李寄放方式須事先向房東確認。"},
+        {"time": "18:00–19:30", "type": "meal", "title": {"zh": "赤坂晚餐・博多牛雜鍋", "en": "Akasaka Dinner", "ja": "赤坂・もつ鍋"}, "details": "建議在赤坂一帶用餐，從大濠公園附近回住宿不遠；熱門牛雜鍋店請先訂位。", "map": "https://www.google.com/maps/search/?api=1&query=Yamanaka+Akasaka+Fukuoka", "source": "https://motsunabe-yamanaka.com/akasaka_/"}
+      ],
+      "meals": [
+        {"slot": "午餐 · 博多", "main": {"zh": "博多一幸舍・博多 DEITOS 店", "en": "Hakata Ikkousha Deitos", "ja": "博多一幸舎 博多デイトス店", "why": "位於車站商場，帶行李與轉乘較方便。", "maps": "https://www.google.com/maps/search/?api=1&query=Hakata+Ikkousha+Deitos", "source": "https://ikkousha.com/store/"}, "alternatives": [
+          {"zh": "博多一幸舍・總本店", "ja": "博多一幸舎 総本店", "why": "車站博多口方向，可接受短程步行者選。", "maps": "https://www.google.com/maps/search/?api=1&query=Hakata+Ikkousha+Sohonten"},
+          {"zh": "讚岐烏龍麵 志成", "ja": "讃岐うどん 志成", "why": "若改成直接往大濠用餐，可選公園附近清淡烏龍麵。", "maps": "https://www.google.com/maps/search/?api=1&query=Sanuki+Udon+Shinari+Fukuoka"}
+        ]},
+        {"slot": "晚餐 · 赤坂／天神", "main": {"zh": "博多牛雜鍋 山中・赤坂店", "en": "Motsunabe Yamanaka Akasaka", "ja": "博多もつ鍋 やま中 赤坂店", "why": "距大濠公園住宿區相對順路；建議預約。", "maps": "https://www.google.com/maps/search/?api=1&query=Motsunabe+Yamanaka+Akasaka", "source": "https://motsunabe-yamanaka.com/akasaka_/"}, "alternatives": [
+          {"zh": "牛雜鍋 一藤・天神西通店", "ja": "もつ鍋 一藤 天神西通り店", "why": "同類型熱門鍋物，適合轉往天神用餐。", "maps": "https://www.google.com/maps/search/?api=1&query=Motsunabe+Ichifuji+Tenjin"},
+          {"zh": "元祖牛雜鍋 樂天地・天神店", "ja": "元祖もつ鍋 楽天地 天神店", "why": "較隨性的大眾化鍋物備選。", "maps": "https://www.google.com/maps/search/?api=1&query=Rakutenchi+Motsunabe+Tenjin"}
+        ]}
+      ],
+      "notes": ["首日保留午后長休息，避免連續清晨搭機加重疲勞。", "大濠日本庭園 11 月提早於 17:00 關門。", "可選夜間活動：大濠日本庭園 SEKAI 18:30–22:00，但僅在體力許可時加選，且需另外購票。"]
+    },
+    {
+      "date": "11.27", "weekday": "FRI", "number": "02", "heading": "太宰府的信仰與古代日本", "theme": "文化深遊", "summary": "上午參拜太宰府，下午留給九州國立博物館；傍晚順路回到天神吃飯，不額外跨城繞行。", "base": "太宰府・天神", "pace": "中強度", "routeText": "大濠公園 → 西鐵福岡（天神） → 西鐵二日市 → 太宰府 → 天神 → 住宿", "routeMaps": "https://www.google.com/maps/dir/?api=1&origin=Ohori+Park+Station&destination=Dazaifu+Tenmangu&travelmode=transit", "highlights": [
+        {"time": "09:00–10:10", "type": "transport", "title": {"zh": "大濠公園 → 太宰府", "en": "Ohori Park → Dazaifu", "ja": "大濠公園 → 太宰府"}, "details": "地下鐵前往天神、步行至西鐵福岡（天神）站，搭西鐵天神大牟田線至二日市轉太宰府線。含步行候車預留約 60–70 分鐘。", "tip": "需分清福岡市地下鐵天神站與西鐵福岡（天神）站，兩站並非同一個月台。", "map": "https://www.google.com/maps/dir/?api=1&origin=Ohori+Park+Station&destination=Dazaifu+Station&travelmode=transit", "source": "https://umegaemochi.com/shop/"},
+        {"time": "10:10–11:45", "type": "feature", "title": {"zh": "太宰府天滿宮・表參道", "en": "Dazaifu Tenmangu Shrine", "ja": "太宰府天満宮"}, "details": "從太宰府車站順參道前行，走過太鼓橋參拜與拍照。11 月神社開門 06:30、關門 19:00；參拜免費。", "tip": "正殿或施工狀態須依神社公告；參道梅枝餅適合當小點心。", "map": "https://www.google.com/maps/search/?api=1&query=Dazaifu+Tenmangu", "source": "https://www.dazaifutenmangu.or.jp/en/plan/faq/"},
+        {"time": "11:50–12:50", "type": "meal", "title": {"zh": "太宰府表參道午餐", "en": "Dazaifu Lunch", "ja": "太宰府参道ランチ"}, "details": "太宰府周邊以簡餐及參道小吃為主。不要為特定餐廳長時間排隊而壓縮博物館時段。", "map": "https://www.google.com/maps/search/?api=1&query=Dazaifu+Station+restaurants"},
+        {"time": "13:00–15:10", "type": "feature", "title": {"zh": "九州國立博物館特展", "en": "Kyushu National Museum", "ja": "九州国立博物館"}, "details": "2026/10/31–2027/01/11 有『卑彌呼之鏡』特展，11/27（週五）公開資料顯示開館 09:30–17:00、16:30 最後入館；特展成人當日票 ¥2,000，包含文化交流常設展。", "tip": "若不想看特展，可改參觀常設展與周邊散步；不可把特展票價誤認為一般門票。", "map": "https://www.google.com/maps/search/?api=1&query=Kyushu+National+Museum", "source": "https://www.kyuhaku.jp/zh-tw/exhibition/exhibition_s78.html"},
+        {"time": "15:20–16:30", "type": "transport", "title": {"zh": "返程・太宰府 → 天神", "en": "Dazaifu → Tenjin", "ja": "太宰府 → 西鉄福岡（天神）"}, "details": "搭西鐵回到天神商圈，含步行與等車預留約 60–70 分鐘。", "map": "https://www.google.com/maps/dir/?api=1&origin=Dazaifu+Station&destination=Nishitetsu+Fukuoka+Tenjin+Station&travelmode=transit"},
+        {"time": "16:30–18:00", "type": "place", "title": {"zh": "天神・今泉自由散策", "en": "Tenjin & Imaizumi", "ja": "天神・今泉"}, "details": "逛街、咖啡與選物小店，在同一商圈活動；視體力也能直接提前回住宿。", "map": "https://www.google.com/maps/search/?api=1&query=Tenjin+Fukuoka"},
+        {"time": "18:00–19:30", "type": "meal", "title": {"zh": "天神晚餐", "en": "Tenjin Dinner", "ja": "天神ディナー"}, "details": "以車站周邊豚骨拉麵、牛雜鍋或居酒屋為主。熱門店應留排隊緩衝。"}
+      ],
+      "meals": [
+        {"slot": "午餐 · 太宰府", "main": {"zh": "茶話 Sawa・咖哩與咖啡", "en": "Sawa Curry & Cafe", "ja": "カレー＆カフェ茶話", "why": "在天滿宮附近，可快速坐下用餐；仍須查當日座位與供應狀況。", "maps": "https://www.google.com/maps/search/?api=1&query=Sawa+Dazaifu+Curry"}, "alternatives": [
+          {"zh": "暖暮・太宰府站前店", "ja": "暖暮 太宰府駅前店", "why": "想吃豚骨拉麵時的車站附近選項。", "maps": "https://www.google.com/maps/search/?api=1&query=Danbo+Dazaifu+Station"},
+          {"zh": "海鮮丼 龍宮城", "ja": "海鮮丼 竜宮城", "why": "偏好海鮮丼飯的備案。", "maps": "https://www.google.com/maps/search/?api=1&query=Ryugujyo+Dazaifu+Kaisendon"}
+        ]},
+        {"slot": "晚餐 · 天神", "main": {"zh": "元祖牛雜鍋 樂天地・天神", "en": "Rakutenchi Tenjin", "ja": "元祖もつ鍋 楽天地", "why": "與西鐵返程站點相近，行程結束後較易進食。", "maps": "https://www.google.com/maps/search/?api=1&query=Rakutenchi+Tenjin+Solaria"}, "alternatives": [
+          {"zh": "牛雜鍋 一藤・天神西通", "ja": "もつ鍋 一藤 天神西通り", "why": "想安排坐下慢慢吃牛雜鍋時的選擇。", "maps": "https://www.google.com/maps/search/?api=1&query=Motsunabe+Ichifuji+Tenjin"},
+          {"zh": "博多拉麵 ShinShin・天神本店", "ja": "博多らーめん ShinShin 天神本店", "why": "若不吃牛雜鍋，改成單人也方便的拉麵。", "maps": "https://www.google.com/maps/search/?api=1&query=ShinShin+Tenjin+Honten"}
+        ]}
+      ],
+      "notes": ["九州國立博物館 11/27 特展成人 ¥2,000；當日展期與營業時間已有官方公開資料。", "梅枝餅為點心，餐食請另外吃正餐。", "去回程西鐵車次未預訂，需按當日班表調整。"]
+    },
+    {
+      "date": "11.28", "weekday": "SAT", "number": "03", "heading": "山霧、湯煙與由布院小鎮", "theme": "地方體驗", "summary": "使用一日遊團處理別府與由布院之間較麻煩的交通，避免一天內反覆換車。這一天不要再插入太宰府。", "base": "別府・由布院", "pace": "中高強度・團體固定節奏", "routeText": "大濠公園 → 博多集合 → 別府地獄 → 九州自然動物公園 → 由布院 → 博多", "routeMaps": "https://www.google.com/maps/dir/?api=1&origin=Hakata+Station&destination=Yufuin&waypoints=Umi+Jigoku+Beppu%7CKyushu+Natural+Zoological+Park&travelmode=driving", "highlights": [
+        {"time": "07:10–08:15", "type": "transport", "title": {"zh": "由大濠公園前往博多集合", "en": "Ohori Park → Hakata Meeting Point", "ja": "大濠公園 → 博多駅集合"}, "details": "提早從住宿出發，地下鐵至博多，再步行往筑紫口 Lawson 福岡東方酒店店前；示範商品為 08:15 集合、08:30 出發。", "tip": "集合地點與時間依最後預訂憑證為準，務必比集合時間早到 10–15 分鐘。", "map": "https://www.google.com/maps/search/?api=1&query=Oriental+Hotel+Fukuoka+Hakata+Station", "source": "https://www.kkday.com/zh-hk/product/175897"},
+        {"time": "08:30–10:30", "type": "transport", "title": {"zh": "一日團前往別府", "en": "Coach to Beppu", "ja": "別府へ観光バス移動"}, "details": "使用當地一日遊巴士，不另安排 JR 轉乘。實際車程受週六高速公路交通影響。"},
+        {"time": "10:30–11:55", "type": "feature", "title": {"zh": "別府地獄・海地獄與灶地獄", "en": "Beppu Hells", "ja": "海地獄・かまど地獄"}, "details": "參觀湧泉與溫泉蒸氣景觀。旅行團公開參考行程包含兩站，每站停留時間較短，現場需跟上導遊時間。", "tip": "地獄溫泉為觀賞用高溫熱泉，並非可直接浸泡的溫泉。門票通常不含在團費中。", "map": "https://www.google.com/maps/search/?api=1&query=Umi+Jigoku+Beppu", "source": "https://www.kkday.com/zh-hk/product/175897"},
+        {"time": "12:25–13:55", "type": "place", "title": {"zh": "九州自然動物公園・簡餐", "en": "Kyushu Natural Zoological Park", "ja": "九州自然動物公園 アフリカンサファリ"}, "details": "團體示範路線於此停留約 80–90 分鐘，午餐需依現場餐飲與可用時間調整。叢林巴士及部分活動可能需要額外費用、名額有限。", "tip": "若更偏好慢步調由布院，選購時可考慮不含動物園的別府＋由布院產品，不要自行脫團。", "map": "https://www.google.com/maps/search/?api=1&query=African+Safari+Oita", "source": "https://www.kkday.com/zh-hk/product/175897"},
+        {"time": "14:30–16:50", "type": "feature", "title": {"zh": "由布院湯之坪街道、金鱗湖", "en": "Yufuin & Kinrin Lake", "ja": "湯の坪街道・金鱗湖"}, "details": "從湯之坪街道步行到金鱗湖，約兩小時的自由活動時間必須將步行與集合時間一起計算。", "tip": "以小鎮慢逛、甜品與湖畔為主，勿為排隊名店離集合地過遠。", "map": "https://www.google.com/maps/search/?api=1&query=Kinrin+Lake+Yufuin"},
+        {"time": "16:50–18:30", "type": "transport", "title": {"zh": "搭團體巴士回博多", "en": "Coach Return to Hakata", "ja": "観光バスで博多へ"}, "details": "團體示範路線約 18:30 返回博多。週末交通塞車可能延誤，晚餐不要安排不可退費的固定場次。", "source": "https://www.kkday.com/zh-hk/product/175897"},
+        {"time": "19:00–20:00", "type": "meal", "title": {"zh": "博多晚餐與返回住宿", "en": "Hakata Dinner & Return", "ja": "博多夕食・宿泊先へ"}, "details": "以博多站附近快速用餐為主，再搭地下鐵返回大濠公園。"}
+      ],
+      "meals": [
+        {"slot": "午餐 · 團體行程中", "main": {"zh": "隨團於九州自然動物公園內用餐", "en": "On-site Lunch at African Safari", "ja": "アフリカンサファリ園内で昼食", "why": "此段交通與停留時間由團體控制，園內用餐最不會誤點。", "maps": "https://www.google.com/maps/search/?api=1&query=African+Safari+Oita"}, "alternatives": [
+          {"zh": "自備飯糰與輕食", "ja": "おにぎり・軽食を持参", "why": "若參觀優先或排隊較久，自備午餐比較彈性。", "maps": "https://www.google.com/maps/search/?api=1&query=Hakata+Station+convenience+store"},
+          {"zh": "由布院街道上的當地小吃", "ja": "湯の坪街道の食べ歩き", "why": "若中午來不及吃飽，再於由布院補充；須遵守團體集合時間。", "maps": "https://www.google.com/maps/search/?api=1&query=Yunotsubo+Street+Yufuin"}
+        ]},
+        {"slot": "晚餐 · 博多站", "main": {"zh": "博多一幸舍・博多 DEITOS 店", "en": "Hakata Ikkousha Deitos", "ja": "博多一幸舎 博多デイトス店", "why": "回到博多即可用餐，降低當天體力與轉乘負擔。", "maps": "https://www.google.com/maps/search/?api=1&query=Hakata+Ikkousha+Deitos", "source": "https://ikkousha.com/store/"}, "alternatives": [
+          {"zh": "博多一幸舍・筑紫口店", "ja": "博多一幸舎 博多駅筑紫口店", "why": "仍在博多站東側，交通最便捷。", "maps": "https://www.google.com/maps/search/?api=1&query=Ikkousha+Hakata+Chikushi"},
+          {"zh": "博多一幸舍・總本店", "ja": "博多一幸舎 総本店", "why": "想稍微走動的另一選擇，注意排隊。", "maps": "https://www.google.com/maps/search/?api=1&query=Hakata+Ikkousha+Sohonten"}
+        ]}
+      ],
+      "notes": ["旅行團為建議產品，尚未查證 2026/11/28 有無空位或最終成團，應優先完成預訂。", "KKday 的商品參考行程可能隨日期、方案、營運商改變；實際以訂單憑證為準。", "此團停留較緊湊，若想用半日悠遊由布院，需改選不含動物園的路線。"]
+    },
+    {
+      "date": "11.29", "weekday": "SUN", "number": "04", "heading": "在門司港告別九州", "theme": "海港收尾", "summary": "退房後一路朝北九州機場方向移動；午後走訪復古港町，傍晚在小倉用餐，保留充足機場報到緩衝。", "base": "門司港・小倉・北九州機場", "pace": "中強度", "routeText": "大濠公園 → 博多 → 小倉（寄物） → 門司港 → 小倉 → 北九州機場", "routeMaps": "https://www.google.com/maps/dir/?api=1&origin=Ohori+Park+Fukuoka&destination=Kitakyushu+Airport&waypoints=Hakata+Station%7CKokura+Station%7CMojiko+Station&travelmode=driving", "highlights": [
+        {"time": "09:00–11:25", "type": "transport", "title": {"zh": "退房・大濠公園 → 小倉", "en": "Check-out & Transfer to Kokura", "ja": "チェックアウト・小倉へ"}, "details": "退房後搭地下鐵至博多，再搭新幹線或 JR 到小倉。將大型行李寄在小倉站，避免帶到門司港。", "tip": "小倉站寄物櫃不保證有空位；若箱子過大，先查附近人工寄物服務並保留備案。", "map": "https://www.google.com/maps/search/?api=1&query=Kokura+Station"},
+        {"time": "11:25–12:00", "type": "transport", "title": {"zh": "小倉 → 門司港", "en": "Kokura → Mojiko", "ja": "小倉駅 → 門司港駅"}, "details": "搭 JR 鹿兒島本線前往門司港，規劃車程約 15–20 分鐘，再步行至港區。", "map": "https://www.google.com/maps/dir/?api=1&origin=Kokura+Station&destination=Mojiko+Station&travelmode=transit"},
+        {"time": "12:00–13:10", "type": "meal", "title": {"zh": "門司港名物・焗烤咖哩", "en": "Mojiko Baked Curry", "ja": "門司港焼きカレー"}, "details": "焗烤咖哩是門司港地方料理；主選 BEAR FRUITS 在門司港站附近。週日午餐熱門店容易排隊，可即時換備選。", "map": "https://www.google.com/maps/search/?api=1&query=Bear+Fruits+Mojiko", "source": "https://bearfruits.jp/bearfruits"},
+        {"time": "13:15–15:35", "type": "feature", "title": {"zh": "門司港懷舊區散策", "en": "Mojiko Retro Waterfront", "ja": "門司港レトロ"}, "details": "從 JR 門司港站出發，串連舊大阪商船、舊門司海關、藍翼門司與海峽廣場；景點彼此距離近，可純步行完成。", "tip": "若天氣不好，可縮短港邊散步，挑選室內建築展館或咖啡廳。", "map": "https://www.google.com/maps/search/?api=1&query=Mojiko+Retro", "source": "https://www.crossroadfukuoka.jp/tw/articles/mojiko-retro"},
+        {"time": "15:35–16:10", "type": "transport", "title": {"zh": "搭 JR 返回小倉", "en": "Mojiko → Kokura", "ja": "門司港駅 → 小倉駅"}, "details": "搭 JR 返回小倉後步行前往小倉城。", "map": "https://www.google.com/maps/dir/?api=1&origin=Mojiko+Station&destination=Kokura+Castle&travelmode=transit"},
+        {"time": "16:15–17:30", "type": "feature", "title": {"zh": "小倉城・勝山公園", "en": "Kokura Castle", "ja": "小倉城・勝山公園"}, "details": "小倉城 11 月開放時間原則為 09:00–19:00（最晚入場閉館前 30 分），成人天守閣參考 ¥500，活動日可能調整。", "tip": "先留意返回小倉站所需步行時間；城內參觀時間可彈性縮短。", "map": "https://www.google.com/maps/search/?api=1&query=Kokura+Castle", "source": "https://kokura-castle.jp/schedule/?lang=zh-Hant"},
+        {"time": "17:40–18:35", "type": "meal", "title": {"zh": "小倉晚餐・在地烏龍麵", "en": "Kokura Early Dinner", "ja": "小倉早めの夕食"}, "details": "選小倉魚町一帶用餐，靠近小倉站且資さんうどん魚町店 24 小時營業，是時間較穩定的選擇。", "map": "https://www.google.com/maps/search/?api=1&query=Sukesan+Udon+Uomachi", "source": "https://www.sukesanudon.com/map/branch/46/"},
+        {"time": "18:35–20:45", "type": "transport", "title": {"zh": "取行李・小倉 → 北九州機場", "en": "Kokura → Kitakyushu Airport", "ja": "小倉駅 → 北九州空港"}, "details": "18:35 起往車站取行李，目標搭乘約 19:30–20:00 時段的機場巴士（僅規劃窗口，非已核實特定班次），力求 20:45 前抵達機場。", "tip": "西鐵機場巴士不採預約制、滿座可能無法上車；務必查 11/29 週日班表及候車站牌。", "map": "https://www.google.com/maps/dir/?api=1&origin=Kokura+Station&destination=Kitakyushu+Airport&travelmode=transit", "source": "https://nishitetsu-ktq.jp/archives/9209"},
+        {"time": "20:45–23:50", "type": "flight", "title": {"zh": "機場報到・星悅航空 7G801", "en": "STARFLYER 7G801", "ja": "スターフライヤー 7G801"}, "details": "23:50 北九州出發；抵達台灣桃園為 11/30 01:30。建議至少提前兩小時至機場辦理國際線手續，依航空公司報到截止時間為準。", "tip": "實際起飛與登機時間及報到櫃檯須以航空公司通知為準。", "map": "https://www.google.com/maps/search/?api=1&query=Kitakyushu+Airport", "source": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"}
+      ],
+      "meals": [
+        {"slot": "午餐 · 門司港", "main": {"zh": "BEAR FRUITS 焗烤咖哩", "en": "BEAR FRUITS", "ja": "焼きカレー専門店 BEAR FRUITS", "why": "距門司港站近，經營 20 多年的在地名物店。", "maps": "https://www.google.com/maps/search/?api=1&query=BEAR+FRUITS+Mojiko", "source": "https://bearfruits.jp/bearfruits"}, "alternatives": [
+          {"zh": "伽哩本舖・門司港懷舊店", "ja": "伽哩本舗 門司港レトロ店", "why": "同區的焗烤咖哩備選。", "maps": "https://www.google.com/maps/search/?api=1&query=Curry+Honpo+Mojiko+Retro"},
+          {"zh": "王樣的雞蛋", "ja": "王様のたまご", "why": "提供焗烤咖哩及蛋料理，適合想換口味者。", "maps": "https://www.google.com/maps/search/?api=1&query=Osama+no+Tamago+Mojiko"}
+        ]},
+        {"slot": "晚餐 · 小倉", "main": {"zh": "資さん烏龍麵・魚町店", "en": "Sukesan Udon Uomachi", "ja": "資さんうどん 魚町店", "why": "靠近小倉站、24 小時營業，更適合搭機前早吃。", "maps": "https://www.google.com/maps/search/?api=1&query=Sukesan+Udon+Uomachi", "source": "https://www.sukesanudon.com/map/branch/46/"}, "alternatives": [
+          {"zh": "小倉鐵鍋餃子", "ja": "小倉鉄なべ", "why": "想品嚐小倉名物鐵鍋餃子時的備選；用餐需控制在機場巴士之前。", "maps": "https://www.google.com/maps/search/?api=1&query=Kokura+Tetsunabe"},
+          {"zh": "出汁劇場・小倉站前店", "ja": "だし劇場 小倉駅前店", "why": "想坐下吃關東煮與居酒屋菜色時的替代方案。", "maps": "https://www.google.com/maps/search/?api=1&query=Dashi+Gekijo+Kokura+Station"}
+        ]}
+      ],
+      "notes": ["建議 20:45 前抵達北九州機場，以免國際線 23:50 起飛前太趕。", "19:30–20:00 為巴士預定搭乘窗口，非已確認出發班次；須查 11/29 週日西鐵冬季班表。", "保留寄物、回站與候車時間；任何延誤應優先取消小倉城而非壓縮機場時間。"]
+    }
+  ],
+  "sources": [
+    {"name": "STARFLYER 2026 冬季班表", "url": "https://www.starflyer.jp/int_tw/timetable/tpe-kkj.html"},
+    {"name": "西鐵北九州機場巴士冬季公告", "url": "https://nishitetsu-ktq.jp/archives/9209"},
+    {"name": "大濠公園日本庭園官方", "url": "https://www.ohoriteien.jp/en/"},
+    {"name": "太宰府天滿宮官方", "url": "https://www.dazaifutenmangu.or.jp/en/plan/faq/"},
+    {"name": "九州國立博物館 2026 特展", "url": "https://www.kyuhaku.jp/zh-tw/exhibition/exhibition_s78.html"},
+    {"name": "KKday 由布院・別府示範一日團", "url": "https://www.kkday.com/zh-hk/product/175897"},
+    {"name": "福岡縣觀光局：門司港懷舊", "url": "https://www.crossroadfukuoka.jp/tw/articles/mojiko-retro"},
+    {"name": "小倉城官方", "url": "https://kokura-castle.jp/schedule/?lang=zh-Hant"}
+  ]
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#48483A">
+  <meta name="description" content="TRAVEL / EDITION — 一份可持續擴充的九州四天三夜旅行手冊，以優雅版面呈現三語地名、交通動線、餐飲備案、查證來源及 Google Maps。">
+  <title>九州・秋末的四日散策｜TRAVEL / EDITION</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+TC:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="module" src="assets/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至行程內容</a>
+  <div class="top-line"></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="./" aria-label="TRAVEL EDITION 首頁"><span class="brand-mark">T<span class="brand-slash">/</span>E</span><span class="brand-word">TRAVEL<br>EDITION</span></a>
+      <div class="header-right">
+        <label for="tripSelect" class="small-label">TRAVEL JOURNAL</label>
+        <select id="tripSelect" aria-label="選擇旅程"><option>載入中…</option></select>
+        <button class="header-print" type="button" id="printTop" aria-label="列印或儲存 PDF">↗ <span>匯出 PDF</span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="tripTitle">
+      <div class="hero-visual">
+        <img id="heroImage" src="https://images.unsplash.com/photo-1698790473387-4e09197c7a38?auto=format&fit=crop&w=1800&q=85" alt="福岡大濠公園湖面與紅色涼亭">
+        <div class="hero-shade"></div>
+        <span class="hero-photo" id="imageCredit"></span>
+      </div>
+      <div class="hero-content">
+        <span class="hero-kicker">AN EDITORIAL TRAVEL NOTEBOOK <span class="kicker-number">· NO. 001</span></span>
+        <h1 id="tripTitle">九州・<br>秋末的四日散策</h1>
+        <div id="tripSubtitle" class="hero-en">Fukuoka · Dazaifu · Yufuin · Kitakyushu</div>
+        <div class="hero-rule"></div>
+        <p id="tripDesc" class="hero-desc">從大濠公園的湖光開始，以門司港的海風收尾。</p>
+        <div class="hero-bottom"><span id="dateRange">2026.11.26 — 11.29</span><span class="hero-duration" id="duration">4 DAYS / 3 NIGHTS</span></div>
+      </div>
+    </section>
+
+    <section class="intro" aria-label="行程摘要">
+      <div class="intro-lead"><span class="eyebrow">THE ITINERARY AT A GLANCE</span><h2>讓每一步，<br><em>都有前往的理由。</em></h2></div>
+      <div class="intro-notes"><p>不是為了塞滿每一天，而是將想看的風景，串成走得完的路線。</p><div class="meta-lines"><div><span>BASE</span><strong id="baseText">大濠公園附近 Airbnb</strong></div><div><span>TRANSPORT</span><strong>JR ・ 地下鐵 ・ 西鐵 ・ 當地一日團</strong></div><div><span>ALL TIMES</span><strong>日本當地時間（UTC+9）</strong></div></div></div>
+    </section>
+
+    <section id="flightSection" class="flight-section" aria-labelledby="flightHeading"><div class="section-cap"><span class="eyebrow">01 / LOGISTICS</span><h2 id="flightHeading">飛行資訊 <span>FLIGHT DETAILS</span></h2></div><div id="flightCards" class="flight-grid"></div></section>
+
+    <section class="planner" aria-labelledby="plannerHeading">
+      <div class="section-cap planner-heading"><span class="eyebrow">02 / DAILY CHAPTERS</span><h2 id="plannerHeading">四日旅程 <span>DAY BY DAY</span></h2></div>
+      <div class="planner-layout">
+        <div class="planner-main">
+          <div class="day-tabs" id="dayTabs" role="tablist" aria-label="選擇日期"></div>
+          <div id="dayPanels"></div>
+        </div>
+        <aside class="planner-aside" aria-label="出發提醒">
+          <div class="aside-sticky"><div class="aside-top"><span class="aside-index">BEFORE YOU GO</span><h3>出發前的<br>重要備忘</h3><p>那些容易漏掉，卻直接影響行程能否順利的細節。</p></div><div id="pretripNotes" class="pretrip-list"></div><div class="aside-foot"><span>FACT-CHECKED SOURCES</span><span id="updatedDate"></span></div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="sources-section" aria-labelledby="sourcesHeading"><div class="section-cap"><span class="eyebrow">03 / REFERENCES</span><h2 id="sourcesHeading">資料來源 <span>TRAVEL SOURCES</span></h2></div><p class="source-desc">行程、班表與票價可能異動；以下保留本次查證的官方及供應商頁面，出發前請再確認。</p><div id="sources" class="source-list"></div></section>
+    <section class="closing"><div class="closing-no">T/E</div><div><p>FROM AN IDEA TO A JOURNEY.</p><h2>把旅程寫好，<br>再讓設計說故事。</h2></div><button id="shareBottom" type="button" class="share-btn">複製這份旅程連結 ↗</button></section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>TRAVEL / EDITION © 2026</span><span>DESIGNED TO BE REUSED — GUIDED BY AGENTS.MD</span></div></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
